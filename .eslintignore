@@ -1,0 +1,8 @@
+# storybook
+!.storybook
+
+# testing
+!.jest
+
+# misc
+generators
