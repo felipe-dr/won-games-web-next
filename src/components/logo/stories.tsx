@@ -14,6 +14,9 @@ const meta: Meta<LogoProps> = {
       control: { type: 'select' },
       options: ['normal', 'large'],
     },
+    $hideOnMobile: {
+      type: 'boolean',
+    },
   },
 };
 
@@ -23,5 +26,6 @@ export const Default: StoryObj<LogoProps> = {
   args: {
     color: 'white',
     size: 'normal',
+    $hideOnMobile: false,
   },
 };
