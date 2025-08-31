@@ -10,6 +10,10 @@ const meta: Meta<LogoProps> = {
       control: { type: 'select' },
       options: ['white', 'black'],
     },
+    size: {
+      control: { type: 'select' },
+      options: ['normal', 'large'],
+    },
   },
 };
 
@@ -18,5 +22,6 @@ export default meta;
 export const Default: StoryObj<LogoProps> = {
   args: {
     color: 'white',
+    size: 'normal',
   },
 };
