@@ -1,9 +1,22 @@
-import { Meta, StoryObj } from '@storybook/react';
-import Logo from '.';
+import type { Meta, StoryObj } from '@storybook/react';
 
-export default {
+import Logo, { LogoProps } from '.';
+
+const meta: Meta<LogoProps> = {
   title: 'Logo',
   component: Logo,
-} as Meta;
+  argTypes: {
+    color: {
+      control: { type: 'select' },
+      options: ['white', 'black'],
+    },
+  },
+};
 
-export const Default: StoryObj = {};
+export default meta;
+
+export const Default: StoryObj<LogoProps> = {
+  args: {
+    color: 'white',
+  },
+};
