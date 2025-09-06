@@ -16,16 +16,16 @@ const wrapperModifiers = {
     &::after {
       position: absolute;
       left: 0;
-      bottom: -1rem;
+      bottom: -0.5rem;
       content: '';
       width: 5rem;
-      border: 0.4rem solid ${theme.colors.primary};
+      border-bottom: 0.5rem solid ${theme.colors.primary};
     }
   `,
 };
 
 export const Wrapper = styled.h2<HeadingProps>`
-  ${({ theme, color, lineLeft, lineBottom }) => css`
+  ${({ theme, color, $lineLeft, $lineBottom }) => css`
     color: ${theme.colors[color!]};
     font-size: ${theme.font.sizes.xlarge};
 
@@ -33,7 +33,7 @@ export const Wrapper = styled.h2<HeadingProps>`
       font-size: ${theme.font.sizes.xxlarge};
     `}
 
-    ${lineLeft && wrapperModifiers.lineLeft(theme)}
-    ${lineBottom && wrapperModifiers.lineBottom(theme)}
+    ${$lineLeft && wrapperModifiers.lineLeft(theme)}
+    ${$lineBottom && wrapperModifiers.lineBottom(theme)}
   `}
 `;
