@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Menu from '.';
+import Menu, { MenuProps } from '.';
 
 const meta: Meta = {
   title: 'Menu',
@@ -10,7 +10,7 @@ const meta: Meta = {
 
 export default meta;
 
-export const Default: StoryObj = {
+export const Default: StoryObj<MenuProps> = {
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
