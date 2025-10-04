@@ -12,5 +12,7 @@ export const Default: StoryObj<HeadingProps> = {
   args: {
     children: 'Most Populars',
     color: 'white',
+    $lineColor: 'primary',
+    size: 'medium',
   },
 };
